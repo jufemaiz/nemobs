@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang=en>
+
+	<head>
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+		<title>{{ page.title }}</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<!-- Bootstrap -->
+		<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/lib/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+		<link href="/stylesheets/main.css" rel="stylesheet" media="screen">
+	</head>
+
+	<body>
+		<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../" class="navbar-brand">NEMOBS</a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<ul class="nav navbar-nav">
+						<li {% if page.state == 'nsw' %}class="active"{% endif %}>
+							<a href="/state/nsw">New South Wales</a>
+						</li>
+						<li {% if page.state == 'qld' %}class="active"{% endif %}>
+							<a href="/state/qld">Queensland</a>
+						</li>
+						<li {% if page.state == 'sa' %}class="active"{% endif %}>
+							<a href="/state/sa">South Australia</a>
+						</li>
+						<li {% if page.state == 'vic' %}class="active"{% endif %}>
+							<a href="/state/vic">Victoria</a>
+						</li>
+						<li {% if page.state == 'tas' %}class="active"{% endif %}>
+							<a href="/state/tas">Tasmania</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container">
+			{{ content }}
+		</div>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">Data driven by the <a href="http://aemo.com.au/Electricity">Australian Energy Market Operator</a>.</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>
